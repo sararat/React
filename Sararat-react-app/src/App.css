@@ -98,7 +98,7 @@ body {
 
 .Post {
   width: 100%;
-  margin: 20px auto;
+  margin: 5px auto;
   background: white;
   border-radius: 10px;
   padding: 15px;
@@ -135,14 +135,15 @@ body {
 .Post__time {
   color: gray;
   font-size: 13px;
+  
 }
 
 .Post__content {
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .Post__content p {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 17px;
 }
 
@@ -246,6 +247,7 @@ body {
 
 .Post__comments {
   margin-top: 15px;
+  text-align: left;
 }
 
 .Comment {

@@ -18,8 +18,6 @@ function Post({
 }) {
   const [text, setText] = useState("");
   const [showComment, setShowComment] = useState(false);
-
-  // ส่ง Comment
   const handleComment = () => {
     if (text.trim() === "") return;
 
@@ -27,7 +25,6 @@ function Post({
     setText("");
   };
 
-  // กด Enter เพื่อส่ง Comment
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       handleComment();
