@@ -96,68 +96,96 @@ body {
   outline: none;
 }
 
-/* โพสต์ */
+.Post {
+  width: 100%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+.Post__delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .Post__header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 15px;
+  gap: 10px;
 }
 
 .Post__avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
-.Post__info {
-  display: flex;
-  flex-direction: column;
-}
-
-.Post__title {
-  margin: 0;
+.Post__name {
   font-size: 18px;
-  font-weight: bold;
 }
 
 .Post__time {
-  margin: 3px 0 0;
-  color: #65676b;
+  color: gray;
   font-size: 13px;
 }
 
 .Post__content {
-  padding: 0 15px 15px;
+  margin-top: 15px;
 }
 
-/* รูปภาพ */
+.Post__content p {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
 .Post__image {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
-  margin-top: 15px;
-}
-/* ปุ่มลบ */
-.Post__delete {
-  float: right;
-  border: none;
-  background: none;
-  color: #666;
-  font-size: 18px;
-  cursor: pointer;
+  border-radius: 10px;
 }
 
-.Post__delete:hover {
-  color: red;
+/* ---------------- Status ---------------- */
+
+.Post__status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  color: #65676b;
+  font-size: 14px;
 }
+
+.Post__likeCount {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.LikeIcon {
+  width: 22px;
+  height: 22px;
+  background: #1877f2;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------- Buttons ---------------- */
+
 .Post__actions {
   display: flex;
-  width: 100%;
-  border-top: 1px solid #ddd;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .Post__actions button {
@@ -165,13 +193,89 @@ body {
   border: none;
   background: white;
   padding: 12px;
-  font-size: 16px;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 15px;
 }
 
 .Post__actions button:hover {
-  background: #f2f2f2;
+  background: #f0f2f5;
+  border-radius: 8px;
 }
+
+.liked {
+  color: #1877f2;
+  font-weight: bold;
+}
+
+/* ---------------- Comment ---------------- */
+
+.Post__comment {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.Post__comment input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+}
+
+.Post__comment button {
+  background: #1877f2;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.Post__comment button:hover {
+  background: #166fe5;
+}
+
+/* ---------------- Comments ---------------- */
+
+.Post__comments {
+  margin-top: 15px;
+}
+
+.Comment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.Comment__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.Comment__bubble {
+  background: #f0f2f5;
+  padding: 10px 15px;
+  border-radius: 15px;
+  flex: 1;
+}
+
+.Comment__bubble strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.Comment__bubble p {
+  margin: 0;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
