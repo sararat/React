@@ -3,7 +3,20 @@ import PropTypes from "prop-types";
 import { BiSolidLike } from "react-icons/bi";
 import { FaRegCommentDots } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
+function timeAgo(date) {
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
 
+  if (seconds < 60) return "เมื่อสักครู่";
+
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes} นาทีที่แล้ว`;
+
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours} ชั่วโมงที่แล้ว`;
+
+  const days = Math.floor(hours / 24);
+  return `${days} วันที่แล้ว`;
+}
 function Post({
   id,
   title,
@@ -15,6 +28,7 @@ function Post({
   toggleLike,
   sharePost,
   addComment,
+  time
 }) {
   const [text, setText] = useState("");
   const [showComment, setShowComment] = useState(false);
@@ -30,6 +44,7 @@ function Post({
       handleComment();
     }
   };
+  const [showShare, setShowShare] = useState(false);
 
   return (
     <div className="Post">
@@ -50,7 +65,7 @@ function Post({
 
         <div>
           <h3 className="Post__name">Sararat W</h3>
-          <p className="Post__time">1 ชั่วโมงที่แล้ว</p>
+          <p className="Post__time">{timeAgo(time)}</p>
         </div>
       </div>
 
@@ -102,9 +117,7 @@ function Post({
           แสดงความคิดเห็น
         </button>
 
-        <button
-          onClick={() => sharePost(id)}
-        >
+        <button onClick={() => setShowShare(true)}>
           <IoShareSocial size={20} />
           แชร์
         </button>
@@ -149,6 +162,41 @@ function Post({
             </div>
           ))}
 
+        </div>
+      )}
+      {showShare && (
+        <div className="Popup">
+          <div className="Popup__content">
+
+            <h3>แชร์โพสต์</h3>
+
+            <button
+              onClick={() => {
+                sharePost(id);
+                alert("แชร์ไปยังโปรไฟล์แล้ว");
+                setShowShare(false);
+              }}
+            >
+              👤 แชร์ไปยังโปรไฟล์
+            </button>
+
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href);
+                alert("คัดลอกลิงก์แล้ว");
+                setShowShare(false);
+              }}
+            >
+              🔗 คัดลอกลิงก์
+            </button>
+
+            <button
+              onClick={() => setShowShare(false)}
+            >
+              ❌ ยกเลิก
+            </button>
+
+          </div>
         </div>
       )}
     </div>

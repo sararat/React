@@ -98,12 +98,13 @@ body {
 
 .Post {
   width: 100%;
-  margin: 5px auto;
+  margin: 2px auto;
   background: white;
   border-radius: 10px;
   padding: 15px;
   position: relative;
   box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  margin-top: 10px;
 }
 
 .Post__delete {
@@ -130,11 +131,14 @@ body {
 
 .Post__name {
   font-size: 18px;
+  margin-bottom: 0%;
 }
 
 .Post__time {
   color: gray;
   font-size: 13px;
+  text-align: left;
+  margin-top: 0%;
   
 }
 
@@ -277,7 +281,51 @@ body {
 .Comment__bubble p {
   margin: 0;
 }
+/* พื้นหลังมืด */
 
+.Popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+/* กล่อง */
+
+.Popup__content{
+    width:350px;
+    background:white;
+    border-radius:10px;
+    padding:20px;
+}
+
+.Popup__content h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.Popup__content button{
+
+    width:100%;
+    margin:8px 0;
+    padding:12px;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+    background:#f0f2f5;
+    font-size:16px;
+}
+
+.Popup__content button:hover{
+    background:#e4e6eb;
+}
 
 /* Responsive */
 @media (max-width: 768px) {

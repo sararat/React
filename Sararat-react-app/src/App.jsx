@@ -21,6 +21,7 @@ function App() {
       likes: 0,
       shares: 0,
       comments: [],
+      time: new Date(),
     };
 
     setPosts([newPost, ...posts]);
@@ -93,6 +94,8 @@ function App() {
           toggleLike={toggleLike}
           sharePost={sharePost}
           addComment={addComment}
+          time={post.time}
+        
         />
       ))}
     </>
