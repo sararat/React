@@ -6,11 +6,15 @@ import Login from './component/Login.jsx'
 import Sigup from './component/Signup.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { UserAuthContextProvider } from './context/UserAuthContext.jsx';
-
+import ProtectedRoute from './auth/ProtectedRoute.jsx'
 const router = createBrowserRouter([
   {
     path:"/",
-    element: <App />,
+     element: (
+      <ProtectedRoute>
+        <App />
+      </ProtectedRoute>
+    ),
   },
   {
     path:"/login",
