@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Login from './component/Login.jsx'
 import Sigup from './component/Signup.jsx'
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { UserAuthContextProvider } from './context/UserAuthContext.jsx';
 
 const router = createBrowserRouter([

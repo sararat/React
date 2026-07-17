@@ -1,0 +1,180 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    height: 56px;
+    width: 100%;
+
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 18px;
+
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+/* Left */
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    color: #1877f2;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box {
+    width: 240px;
+    height: 40px;
+
+    border: none;
+    outline: none;
+
+    background: #f0f2f5;
+
+    border-radius: 50px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+}
+
+/* Center */
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-center a {
+    width: 110px;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #65676b;
+    font-size: 26px;
+
+    border-radius: 10px;
+
+    transition: .2s;
+}
+
+.navbar-center a:hover {
+    background: #f2f2f2;
+    color: #1877f2;
+}
+
+/* Right */
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-email {
+    background: #f0f2f5;
+    padding: 8px 14px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Login */
+
+.nav-login,
+.nav-signup,
+.nav-logout {
+
+    padding: 9px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+/* Login */
+
+.nav-login {
+    border: 1px solid #1877f2;
+    color: #1877f2;
+}
+
+.nav-login:hover {
+    background: #1877f2;
+    color: white;
+}
+
+/* Signup */
+
+.nav-signup {
+    background: #42b72a;
+    color: white;
+}
+
+.nav-signup:hover {
+    background: #36a420;
+}
+
+/* Logout */
+
+.nav-logout {
+    border: none;
+    background: #e41e3f;
+    color: white;
+}
+
+.nav-logout:hover {
+    background: #c91d38;
+}
+
+/* Mobile */
+
+@media (max-width:900px){
+
+    .search-box{
+        display:none;
+    }
+
+    .navbar-center{
+        display:none;
+    }
+
+    .user-email{
+        display:none;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .logo{
+        font-size:34px;
+    }
+
+    .nav-login,
+    .nav-signup,
+    .nav-logout{
+
+        padding:8px 12px;
+        font-size:14px;
+
+    }
+
+}

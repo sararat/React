@@ -22,7 +22,7 @@ export function UserAuthContextProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
 
-  function logout() {
+  function logOut() {
     return signOut(auth);
   }
 
@@ -37,7 +37,7 @@ export function UserAuthContextProvider({ children }) {
 
   return (
     <UserAuthContext.Provider
-      value={{ user, logIn, signUp, logout }}
+      value={{ user, logIn, signUp, logOut }}
     >
       {children}
     </UserAuthContext.Provider>
