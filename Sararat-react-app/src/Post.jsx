@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { BiSolidLike } from "react-icons/bi";
 import { FaRegCommentDots } from "react-icons/fa";
 import { IoShareSocial } from "react-icons/io5";
-import './Post.css' 
+import './resource/Post.css' 
 function timeAgo(date) {
   const seconds = Math.floor((new Date() - new Date(date)) / 1000);
 

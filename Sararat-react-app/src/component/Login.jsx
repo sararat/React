@@ -69,8 +69,8 @@ function Login() {
             <a href="#">Forgotten password?</a>
           </div>
 
-          <hr />
-
+          <div class="divider"></div>
+          
           <Link to="/signup">
             <button className="signup-btn">
               Create new account
@@ -78,7 +78,7 @@ function Login() {
           </Link>
 
         </div>
-
+        
         <p className="create-page">
           <b>Create a Page</b> for a celebrity, brand or business.
         </p>

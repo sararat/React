@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "./Input.css";
+import "./resource/Input.css";
 
 function Input({ addPost }) {
   const [input, setInput] = useState("");

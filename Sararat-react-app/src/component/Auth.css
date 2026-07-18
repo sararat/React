@@ -2,6 +2,7 @@ body{
     margin:0;
     background:#f0f2f5;
     font-family:Helvetica,Arial,sans-serif;
+    box-sizing:border-box;
 }
 
 .fb-container{
@@ -80,7 +81,33 @@ body{
     text-decoration:underline;
 }
 /* Signup */
+.signup-btn{
+    display: block;
+    width: 220px;
+    height: 48px;
 
+    margin: 20px auto 0;
+
+    background: #42b72a;
+    color: #fff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.signup-btn:hover{
+    background: #36a420;
+}
+
+.signup-btn:active{
+    transform: scale(0.98);
+}
 .signup-title{
     text-align:center;
     font-size:32px;
@@ -95,19 +122,33 @@ body{
 }
 
 .signup-btn-full{
+    display: block;
+    margin: 20px auto;
 
-    width:100%;
-    height:50px;
+    width: fit-content;
+    min-width: 200px;
+    padding: 0 20px;
+    height: 48px;
 
-    background:#42b72a;
-    color:white;
+    background: #42b72a;
+    color: #fff;
 
-    border:none;
-    border-radius:6px;
+    border: none;
+    border-radius: 6px;
 
-    font-size:20px;
-    font-weight:bold;
+    font-size: 17px;
+    font-weight: bold;
 
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.signup-btn-full:hover{
+    background: #36a420;
+}
+
+.signup-btn-full:active{
+    transform: scale(0.98);
 }
 
 .signup-btn-full:hover{
@@ -115,7 +156,10 @@ body{
     background:#36a420;
 
 }
-
+.divider{
+    border-top:1px solid #dadde1;
+    margin:20px 0;
+}
 .login-link{
 
     margin-top:20px;
@@ -134,6 +178,21 @@ body{
 
     text-decoration:underline;
 
+}
+.login-card input{
+    width:100%;
+    height:52px;
+    padding:0 15px;
+    margin-bottom:12px;
+    font-size:17px;
+    border:1px solid #dddfe2;
+    border-radius:6px;
+    outline:none;
+}
+
+.login-card input:focus{
+    border-color:#1877f2;
+    box-shadow:0 0 0 2px #e7f3ff;
 }
 
 .create-page{
